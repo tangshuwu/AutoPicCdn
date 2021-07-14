@@ -59,6 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_FILES["pic"]["error"] <= 0) {
         $return['code'] = 'success';
         $return['data']['filename'] = $filename;
         $return['data']['url'] = 'https://cdn.jsdelivr.net/gh/' . USER . '/' . REPO . '@master/' . $res['content']['path'];
+        //可以将https://cdn.jsdelivr.net/gh/替换成自己的加速域名
     } else {
         $return['code'] = 500;
         $return['url'] = null;
